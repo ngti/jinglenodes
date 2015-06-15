@@ -1,6 +1,6 @@
 
 ## Name of the node
--name jn_node
+-sname jn_node
 
 ## Cookie for distributed erlang
 -setcookie jn_node
