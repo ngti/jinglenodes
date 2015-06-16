@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 ENV JENKINS_USER=ahmed@ngti.nl
 ENV JENKINS_TOKEN=00451264e2d21536c0a6088d727855af
-ENV BUILD_VER=DOCKER
+ENV BUILD_VER=master
 RUN apt-get update && apt-get install -y wget
 RUN wget --auth-no-challenge --http-user=$JENKINS_USER --http-password=$JENKINS_TOKEN https://repo.ngti.nl/jenkins/job/jinglenodes-dev/lastSuccessfulBuild/artifact/builds/jinglenodes-${BUILD_VER}.tar.gz
 RUN tar xf jinglenodes-${BUILD_VER}.tar.gz
