@@ -1,7 +1,13 @@
 FROM ubuntu:latest
+
 ENV JENKINS_USER=ahmed@ngti.nl
 ENV JENKINS_TOKEN=00451264e2d21536c0a6088d727855af
 ENV BUILD_VER=master
+ENV JN_XMPP_DOMAIN=my-hc.nl
+ENV JN_XMPP_PORT=11112
+ENV JN_XMPP_PASS=relaypass
+ENV JN_PUBLIC_IP=130.117.76.198
+
 RUN apt-get update && apt-get install -y wget
 RUN wget --auth-no-challenge --http-user=$JENKINS_USER --http-password=$JENKINS_TOKEN https://repo.ngti.nl/jenkins/job/jinglenodes-dev/lastSuccessfulBuild/artifact/builds/jinglenodes-${BUILD_VER}.tar.gz
 RUN tar xf jinglenodes-${BUILD_VER}.tar.gz
