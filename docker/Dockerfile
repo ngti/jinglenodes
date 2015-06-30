@@ -12,4 +12,4 @@ RUN chmod +x /opt/jinglenodes/bin/start_bg.sh
 RUN chmod +x /opt/jinglenodes/bin/configure_jnode.sh
 CMD ["/opt/jinglenodes/bin/start_bg.sh"]
 
-EXPOSE 10000-50000
+EXPOSE 10000-10500
